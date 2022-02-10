@@ -1,10 +1,10 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class Animal(ABC):
 
     def __init__(self, name, num_legs, gender):
-        self.__species = []
+        self.species = []
         self.__name = name
         self.__num_legs = num_legs
         self.__gender = gender
@@ -16,6 +16,3 @@ class Animal(ABC):
     @property
     def name(self):
         return self.__name
-
-if __name__ == '__main__':
-    pass

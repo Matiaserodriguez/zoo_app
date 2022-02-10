@@ -1,7 +1,7 @@
-from animal import Animal
+from .animal import Animal
 
 
-class Giant_Tortoise(Animal):
+class GiantTortoise(Animal):
     
     def __init__(self, name, num_legs, gender, age):
         Animal.__init__(self, name, num_legs, gender)

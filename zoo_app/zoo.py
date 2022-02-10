@@ -22,17 +22,19 @@ class Zoo:
     def add_animal(self, animal):
         self.__animals.append(animal)
 
-    def remove_animal(self, animal):
+    def remove_animal(self, animal_index):
         try:
-            return self.__animals.remove(animal)
+            return self.__animals.pop(animal_index)
         except:
             raise Exception('The animal isn\'t in the zoo')
 
     def return_descriptions(self):
         all_animals_with_description = ''
+        counter = 0
 
         for animal in self.__animals:
-            all_animals_with_description += f'{animal}: {animal.description}\n'
+            all_animals_with_description += f'{counter}. {animal.species[0]} - {animal.name}: {animal.description}\n'
+            counter += 1
         
         return all_animals_with_description
 
